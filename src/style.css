@@ -142,3 +142,20 @@ input[type="text"] {
   background-color: rgb(235, 231, 230);
   color: black;
 }
+
+p {
+  font-size: 14px;
+  bottom: 180px;
+  position: relative;
+  color: rgba(255, 253, 253, 0.836);
+}
+
+a {
+  color: rgba(255, 253, 253, 0.836);
+  text-decoration: none;
+}
+
+a:hover {
+  color: #010101;
+  text-decoration: underline;
+}
