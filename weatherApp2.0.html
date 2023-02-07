@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;700&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="weatherApp">
+        <span class="shape"></span>
+        <form id="search-form">
+          <input
+            type="text"
+            id="textfield"
+            autofocus="on"
+            autocomplete="off"
+            placeholder="Search a city"
+          />
+          <input type="button" value="Submit" />
+          <a href="#" id="currentLocation"
+            ><img
+              src="https://img.icons8.com/material-rounded/24/null/center-direction.png"
+              alt="location"
+          /></a>
+        </form>
+        <div id="heading">
+          <h1 id="city">London</h1>
+          <h2 id="date">Monday 10th</h2>
+        </div>
+        <div class="weather">
+          <ul>
+            <li class="todayCondition" id="condition">Mostly Cloud</li>
+            <li><span class="temperature" id="temperature">21</span></li>
+          </ul>
+        </div>
+        <!--current weather-->
+        <div class="CF">
+          <span class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+          </span>
+        </div>
+        <!--extra info on current weather-->
+        <div class="weather-icon" id="weather-icon">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/5586/5586566.png"
+            alt="cloudy icon"
+          />
+        </div>
+        <div class="extra-info">
+          <ul>
+            <li id="feelsLike"></li>
+            <li id="wind"></li>
+            <li id="humidity">63%</li>
+          </ul>
+        </div>
+        <div class="nextForescast">
+          <!--next 5 days weather-->
+          <ul>
+            <li id="day1">
+              <strong>Tuesday</strong><br />
+              10 | 17
+            </li>
+            <li id="day2">
+              <strong>Wednesday</strong><br />
+              9 | 11
+            </li>
+            <li>
+              <strong>Thursday</strong><br />
+              12 | 14
+            </li>
+            <li>
+              <strong>Friday</strong><br />
+              7 | 12
+            </li>
+            <li>
+              <strong>Saturday</strong><br />
+              2 | 6
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="src/app.js"></script>
+  </body>
+</html>
