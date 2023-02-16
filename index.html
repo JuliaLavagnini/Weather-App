@@ -17,7 +17,46 @@
   <body>
     <div class="App">
       <div class="container">
-        <div class="weatherApp"></div>
+        <div class="weatherApp">
+          <form id="search-form">
+            <input
+              type="text"
+              id="textfield"
+              autofocus="off"
+              autocomplete="off"
+              placeholder="Search a city"
+            />
+            <input class="btn btn-sm" type="button" value="Submit" />
+            <button type="button" class="btn btn-sm" id="currentLocation">
+              Location
+            </button>
+          </form>
+          <div class="row">
+            <div class="col-nd-6">
+              <img src="https://icons8.com/icon/648/sun" alt="Sunny" />
+              <h2 id="description">Clear Sky</h2>
+            </div>
+            <div class="col-nd-6">
+              <div class="col-nd-6">
+                <ul>
+                  <li>
+                    <strong>Wind</strong> <br />
+                    2 km/r
+                  </li>
+                </ul>
+              </div>
+              <div class="col-nd-6">
+                <ul>
+                  <li>
+                    <strong>Humdity</strong> <br />
+                    70%
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row"></div>
+        </div>
       </div>
     </div>
     <script type="text/javascript" src="src/app.js"></script>
