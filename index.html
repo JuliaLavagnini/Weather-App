@@ -17,7 +17,7 @@
   <body>
     <div class="App">
       <div class="container">
-        <div class="weatherApp">
+        <div class="weather_app">
           <form id="search-form">
             <input
               type="text"
@@ -52,7 +52,10 @@
           <div class="row">
             <div class="col-6">
               <h2>21</h2>
-              <h2 id="description">Clear Sky</h2>
+              <span class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
             </div>
             <div class="col-6">
               <ul>
@@ -67,15 +70,45 @@
               </ul>
             </div>
           </div>
-        </div>
-        <small>
-          <a
-            href="https://github.com/JuliaLavagnini/Weather-App"
-            target="_blank"
-            >Open-source code</a
+          <div class="row">
+            <div class="col-6">
+              <h1>London</h1>
+              <h3>Fri 17 Feb</h3>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li id="day1">
+                  <strong>Tuesday</strong><br />
+                  10 | 17
+                </li>
+                <li id="day2">
+                  <strong>Wednesday</strong><br />
+                  9 | 11
+                </li>
+                <li>
+                  <strong>Thursday</strong><br />
+                  12 | 14
+                </li>
+                <li>
+                  <strong>Friday</strong><br />
+                  7 | 12
+                </li>
+                <li>
+                  <strong>Saturday</strong><br />
+                  2 | 6
+                </li>
+              </ul>
+            </div>
+          </div>
+          <small>
+            <a
+              href="https://github.com/JuliaLavagnini/Weather-App"
+              target="_blank"
+              >Open-source code</a
+            >
+            by Julia Lavagnini</small
           >
-          by Julia Lavagnini</small
-        >
+        </div>
       </div>
     </div>
   </body>
