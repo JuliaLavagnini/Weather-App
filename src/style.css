@@ -1,0 +1,112 @@
+body {
+  font-family: "Outfit", sans-serif;
+  color: #111317;
+}
+
+h1 {
+  font-weight: 300;
+  margin-top: 60px;
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+h1 #cityName {
+  font-size: 36px;
+  font-weight: 500;
+  color: #00c5c6;
+}
+
+h1 #description {
+  font-style: italic;
+}
+
+ul {
+  padding-top: 10px;
+}
+
+ul span {
+  font-size: 22px;
+}
+
+ul img {
+  padding-bottom: 6px;
+  margin-right: 4px;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 6px;
+  font-size: 13px;
+}
+
+.weather-app-wrapper {
+  max-width: 840px;
+  max-height: 610px;
+  margin: 100px auto;
+  border: 1px solid#f9f9f9;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 0px 47px 44px 0px rgba(214, 214, 214, 1);
+  -moz-box-shadow: 0px 47px 44px 0px rgba(214, 214, 214, 1);
+  box-shadow: 0px 47px 44px 0px rgba(214, 214, 214, 1);
+}
+.weather-app {
+  max-width: 800px;
+  max-height: 600px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.weather-icon img {
+  margin-left: 7.2em;
+}
+
+.weather-number {
+  position: relative;
+  height: 140px;
+  font-size: 7em;
+  font-weight: 700;
+  margin-bottom: 0;
+  padding-left: 50px;
+  top: -15px;
+}
+
+.max-min {
+  font-weight: 500;
+  margin-bottom: 0;
+  padding-left: 77px;
+  color: #727e97;
+}
+
+.btn-primary {
+  background-color: #111317;
+  border-color: #111317;
+}
+
+.btn-primary:hover {
+  color: #111317;
+  background-color: #9ea0a5;
+  border-color: #9ea0a5;
+}
+
+.convert {
+  margin-top: 4em;
+  text-align: center;
+  color: #727e97;
+}
+
+a {
+  color: #727e97;
+  text-decoration: none;
+}
+
+.convert .active {
+  color: #111317;
+  cursor: default;
+  text-decoration: none;
+}
+
+.convert .active:hover {
+  text-decoration: none;
+}
