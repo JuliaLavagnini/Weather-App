@@ -112,3 +112,5 @@ faherat.addEventListener("click", showfahrenheit);
 
 let celsius = document.querySelector("#celsius");
 celsius.addEventListener("click", showcelsius);
+
+searchCity("London");
