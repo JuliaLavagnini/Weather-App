@@ -91,7 +91,7 @@ li {
 }
 
 .convert {
-  margin-top: 4em;
+  margin-top: 2.3em;
   text-align: center;
   color: #727e97;
 }
@@ -109,4 +109,13 @@ a {
 
 .convert .active:hover {
   text-decoration: none;
+}
+
+.forecast {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.forecast p {
+  margin-bottom: 0%;
 }
