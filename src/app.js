@@ -1,9 +1,45 @@
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
   let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
 
-  let preceptionElement = document.querySelector("#precipitation span");
-  rainP = response;
-  preceptionElement.innerHTML = rainP * 100;
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col">
+            <img
+              src="https://cdn-icons-gif.flaticon.com/10973/10973658.gif${
+                forecastDay.weather[0].icon
+              }"      
+              alt=""    
+              width="40px"    
+              id="forecast-icon"    
+            />        
+            <p>     
+              <span id="forecast-min"> ${Math.round(
+                forecastDay.temp.max
+              )}°</span> /
+              <span id="forecast-max">${Math.round(
+                forecastDay.temp.min
+              )}°</span>
+            </p>
+              <p class="day">${formatDay(formatDay.dt)}</p>
+            </div>
+        `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
 }
 
 function getForecast(coordinates) {
@@ -20,19 +56,19 @@ function displayTemperature(response) {
   let humidityElement = document.querySelector("#humidity span");
   let windElement = document.querySelector("#wind span");
 
-  console.log(response.data.weather[0].main);
+  console.log(response.data.weather[0].icon);
 
   switch (response.data.weather[0].main) {
-    case "Clear":
     case "01d":
       weatherPic.src = "https://cdn-icons-gif.flaticon.com/6455/6455017.gif";
       break;
 
-    case "Clear":
     case "01n":
       weatherPic.src = "https://cdn-icons-gif.flaticon.com/6455/6455031.gif";
       break;
+  }
 
+  switch (response.data.weather[0].main) {
     case "Clouds":
       weatherPic.src = "https://cdn-icons-gif.flaticon.com/6455/6455053.gif";
       break;
