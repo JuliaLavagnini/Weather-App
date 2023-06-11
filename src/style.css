@@ -17,7 +17,7 @@ h1 #cityName {
 }
 
 ul {
-  margin-top: 50px;
+  margin-top: 5px;
   padding-left: 10px;
 }
 
@@ -91,7 +91,7 @@ li {
 
 .forecast {
   text-align: center;
-  margin-top: 2em;
+  margin-top: 1em;
 }
 
 .forecast p {
@@ -104,7 +104,7 @@ li {
 }
 
 .degree {
-  padding: 50px 0 20px 0;
+  padding: 30px 0 20px 0;
   text-align: center;
   color: #727e97;
 }

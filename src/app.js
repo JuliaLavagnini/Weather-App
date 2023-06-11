@@ -1,3 +1,4 @@
+//Easier access to all icons that are needed
 function iconNameFunction(iconName) {
   switch (iconName) {
     case "01d":
@@ -29,6 +30,7 @@ function iconNameFunction(iconName) {
   }
 }
 
+//Placing name to the "dt"
 function daysName(timestamp) {
   let date = new Date(timestamp * 1000);
   let day = date.getDay();
@@ -37,6 +39,7 @@ function daysName(timestamp) {
   return days[day];
 }
 
+//function to display forecast multiple times at once with call on icon function
 function displayForecast(response) {
   let forecast = response.data.daily;
 
@@ -76,6 +79,7 @@ function getForecast(coordinates) {
   axios.get(apiUrl).then(displayForecast);
 }
 
+//main function which display temperature, city inputed, and extra info. Also, provide city coordinates for getForecast and displayForecast functions
 function displayTemperature(response) {
   let weatherPic = document.querySelector("#icon");
   let temperatureElement = document.querySelector("#temperature");
@@ -83,6 +87,23 @@ function displayTemperature(response) {
   let descriptionElement = document.querySelector("#description");
   let humidityElement = document.querySelector("#humidity span");
   let windElement = document.querySelector("#wind span");
+
+  //sunset/sunrise results
+  let sunsetElement = document.querySelector("#sunset span");
+  let sunriseElement = document.querySelector("#sunrise span");
+  let sunrise = new Date(response.data.sys.sunrise * 1000);
+  let sunset = new Date(response.data.sys.sunset * 1000);
+  sunriseElement.innerHTML = sunrise.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+  sunsetElement.innerHTML = sunset.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "numeric",
+    hour12: true,
+  });
+
   let minTemperatureElement = document.querySelector("#min");
   let maxTemperatureElement = document.querySelector("#max");
 
@@ -101,6 +122,7 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
+//these others functions and varaibles are where all functionability are created
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#search-text");

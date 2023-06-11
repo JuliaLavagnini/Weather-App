@@ -22,6 +22,7 @@
     <div class="container">
       <div class="weather-app-wrapper">
         <div class="weather-app">
+          <!--These form and H1 content are not putted into a grid-->
           <form id="search-form" class="d-flex">
             <input
               type="search"
@@ -37,9 +38,9 @@
               >it's ...</span
             >
           </h1>
-          <!--weather info-->
+          <!--All weather content located here-->
           <div class="row">
-            <!--weather icon-->
+            <!--This is the main weather icon with fixed width -->
             <div class="col">
               <div class="weather-icon">
                 <img
@@ -50,31 +51,40 @@
                 />
               </div>
             </div>
-            <!--weather number-->
+            <!--This is the weather temperature and min/max temperature-->
             <div class="col">
-              <p class="weather-number" id="temperature"></p>
+              <p class="weather-number" id="temperature">10</p>
               <p class="max-min">
-                <span id="min"></span>° / <span id="max"></span>°
+                <span id="min">05</span>° / <span id="max">12</span>°
               </p>
             </div>
-            <!--weather detail-->
+            <!--This is the weather extra information wind, humidity and sunset/sunrise-->
             <div class="col">
               <div class="weather-info">
                 <ul>
                   <li class="wind" id="wind">
-                    <img src="media/windy.png" width="24px" /><span> </span> mph
+                    <img src="media/windy.png" width="24px" /><span> 5</span>
+                    mph
+                  </li>
+                  <li class="sunrise" id="sunrise">
+                    <img src="media/sunrise.png" width="24px" /><span> </span>
+                  </li>
+                  <li class="sunset" id="sunset">
+                    <img src="media/sunset.png" width="24px" /><span> </span>
                   </li>
                   <li class="humidity" id="humidity">
-                    <img src="media/humidity.png" width="24px" /><span> </span>
+                    <img src="media/humidity.png" width="24px" /><span>
+                      10</span
+                    >
                     %
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <!--forecast-->
+          <!--This section is where the forecast will be displayed with JS -->
           <div class="forecast" id="forecast"></div>
-          <!--degree-->
+          <!--This present the unit which all the data are displayed with style-->
           <div class="degree">
             <span
               href="#"
@@ -86,6 +96,7 @@
             </span>
           </div>
         </div>
+        <!--Ownership declared and easy access to see the code behind the visual -->
         <small>
           <a
             href="https://github.com/JuliaLavagnini/Weather-App-v2"
