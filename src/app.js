@@ -13,9 +13,9 @@ function iconNameFunction(iconName) {
     case "03n":
       return "media/cloudy.png";
     case "04d":
-      return "media/clouds.png";
+      return "media/cloudy.png";
     case "04n":
-      return "media/clouds.png";
+      return "media/cloudy.png";
     case "09d":
       return "media/drizzle.png";
     case "10d":
@@ -58,8 +58,8 @@ function displayForecast(response) {
           id="forecast-icon"
         />
         <p>
-          <span id="forecast-min"> ${Math.round(forecastDay.temp.max)}°</span> /
-          <span id="forecast-max">${Math.round(forecastDay.temp.min)}°</span>
+          <span id="forecast-min"> ${Math.round(forecastDay.temp.min)}°</span> /
+          <span id="forecast-max">${Math.round(forecastDay.temp.max)}°</span>
         </p>
         <p class="day">${daysName(forecastDay.dt)}</p>
       </div>`;
@@ -90,17 +90,13 @@ function displayTemperature(response) {
 
   weatherPic.src = iconNameFunction(iconName);
 
-  celsiusTemperature = response.data.main.temp;
-  celsiusMinTemperature = response.data.main.temp_min;
-  celsiusMaxTemperature = response.data.main.temp_max;
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  temperatureElement.innerHTML = Math.round(response.data.main.temp);
   cityElement.innerHTML = response.data.name;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed * 3.6);
-  minTemperatureElement.innerHTML = Math.round(celsiusMinTemperature);
-  maxTemperatureElement.innerHTML = Math.round(celsiusMaxTemperature);
+  minTemperatureElement.innerHTML = Math.round(response.data.main.temp_min);
+  maxTemperatureElement.innerHTML = Math.round(response.data.main.temp_max);
 
   getForecast(response.data.coord);
 }
@@ -117,48 +113,9 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayTemperature);
 }
 
-function showfahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let minTemperatureElement = document.querySelector("#min");
-  let maxTemperatureElement = document.querySelector("#max");
-
-  celsius.classList.remove("active");
-  faherat.classList.add("active");
-
-  let fahrenheitConvert = Math.round((celsiusTemperature * 9) / 5 + 32);
-  let fahrenheitConvertMin = Math.round((celsiusMinTemperature * 9) / 5 + 32);
-  let fahrenheitConvertMax = Math.round((celsiusMaxTemperature * 9) / 5 + 32);
-
-  temperatureElement.innerHTML = fahrenheitConvert;
-  minTemperatureElement.innerHTML = fahrenheitConvertMin;
-  maxTemperatureElement.innerHTML = fahrenheitConvertMax;
-}
-
-function showcelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let minTemperatureElement = document.querySelector("#min");
-  let maxTemperatureElement = document.querySelector("#max");
-
-  celsius.classList.add("active");
-  faherat.classList.remove("active");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  maxTemperatureElement.innerHTML = Math.round(celsiusMaxTemperature);
-  minTemperatureElement.innerHTML = Math.round(celsiusMinTemperature);
-}
-
 let celsiusTemperature = null;
-let celsiusMinTemperature = null;
-let celsiusMaxTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
-
-let faherat = document.querySelector("#fahrenheit");
-faherat.addEventListener("click", showfahrenheit);
-
-let celsius = document.querySelector("#celsius");
-celsius.addEventListener("click", showcelsius);
 
 searchCity("London");
