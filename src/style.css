@@ -7,21 +7,18 @@ h1 {
   font-weight: 300;
   margin-top: 60px;
   text-align: center;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 h1 #cityName {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 500;
-  color: #00c5c6;
-}
-
-h1 #description {
-  font-style: italic;
+  color: #111317;
 }
 
 ul {
-  padding-top: 10px;
+  margin-top: 50px;
+  padding-left: 10px;
 }
 
 ul span {
@@ -43,23 +40,25 @@ li {
 .weather-app-wrapper {
   max-width: 840px;
   max-height: 610px;
-  margin: 100px auto;
+  margin: 50px auto;
   border: 1px solid#f9f9f9;
   border-radius: 10px;
+  background-color: #fdfbed;
 
   -webkit-box-shadow: 0px 47px 44px 0px rgba(214, 214, 214, 1);
   -moz-box-shadow: 0px 47px 44px 0px rgba(214, 214, 214, 1);
   box-shadow: 0px 47px 44px 0px rgba(214, 214, 214, 1);
 }
 .weather-app {
-  max-width: 800px;
+  max-width: 770px;
   max-height: 600px;
   margin: 20px auto;
-  padding: 20px;
+  padding: 15px;
 }
 
 .weather-icon img {
-  margin-left: 7.2em;
+  margin-left: 6em;
+  padding-top: 1em;
 }
 
 .weather-number {
@@ -68,47 +67,26 @@ li {
   font-size: 7em;
   font-weight: 700;
   margin-bottom: 0;
-  padding-left: 50px;
-  top: -15px;
+  padding-left: 46px;
+  top: -5px;
 }
 
 .max-min {
   font-weight: 500;
   margin-bottom: 0;
-  padding-left: 77px;
+  padding-left: 80px;
   color: #727e97;
 }
 
 .btn-primary {
-  background-color: #111317;
-  border-color: #111317;
+  background-color: #727e97;
+  border-color: #727e97;
 }
 
 .btn-primary:hover {
   color: #111317;
   background-color: #9ea0a5;
   border-color: #9ea0a5;
-}
-
-.convert {
-  margin-top: 2.3em;
-  text-align: center;
-  color: #727e97;
-}
-
-a {
-  color: #727e97;
-  text-decoration: none;
-}
-
-.convert .active {
-  color: #111317;
-  cursor: default;
-  text-decoration: none;
-}
-
-.convert .active:hover {
-  text-decoration: none;
 }
 
 .forecast {
@@ -118,12 +96,19 @@ a {
 
 .forecast p {
   margin-bottom: 0%;
+  padding-top: 0.5em;
 }
 
 .day {
   font-size: 11px;
 }
 
-.forecast-max {
-  font-style: bold;
+.degree {
+  padding: 50px 0 20px 0;
+  text-align: center;
+  color: #727e97;
+}
+
+#search-text {
+  background-color: #d5d5d5;
 }
