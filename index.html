@@ -33,7 +33,9 @@
           </form>
           <h1>
             Right now in <span id="cityName">Your City</span>,
-            <span id="description">it's ...</span>
+            <span id="description" style="font-style: italic; font-size: 26px"
+              >it's ...</span
+            >
           </h1>
           <!--weather info-->
           <div class="row">
@@ -44,7 +46,7 @@
                   src="media/thermostats.png"
                   alt="Clear"
                   id="icon"
-                  width="140px"
+                  width="160px"
                 />
               </div>
             </div>
@@ -57,23 +59,31 @@
             </div>
             <!--weather detail-->
             <div class="col">
-              <ul>
-                <li class="wind" id="wind">
-                  <img src="media/windy.png" width="24px" /><span> </span> mph
-                </li>
-                <li class="humidity" id="humidity">
-                  <img src="media/humidity.png" width="24px" /><span> </span> %
-                </li>
-              </ul>
+              <div class="weather-info">
+                <ul>
+                  <li class="wind" id="wind">
+                    <img src="media/windy.png" width="24px" /><span> </span> mph
+                  </li>
+                  <li class="humidity" id="humidity">
+                    <img src="media/humidity.png" width="24px" /><span> </span>
+                    %
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
           <!--forecast-->
           <div class="forecast" id="forecast"></div>
-
-          <!--unit convert-->
-          <div class="convert">
-            <a href="#" id="celsius" class="active">°C</a> |
-            <a href="#" id="fahrenheit">°F</a>
+          <!--degree-->
+          <div class="degree">
+            <span
+              href="#"
+              id="celsius"
+              class="active"
+              style="font-style: bold; font-weight: 700"
+              >°C
+              <span style="font-style: italic; font-weight: 300">elsius</span>
+            </span>
           </div>
         </div>
       </div>
