@@ -1,2 +1,2 @@
-# Weather-App-v2
- Newest version of weather app
+# Weather-App
+ This is a weather web application using HTML, CSS and JavaScript.
